@@ -10,6 +10,11 @@ enum class LexerModes {
 
 struct Lexer {
     LexerModes Mode = LexerModes::Default;
+    String CurrentToken = "";
+    Vec<Token> ToReturn = {};
 
-    Vec<Token*> LexicalAnalisys(String Data);
+    void FlushCurrentToken();
+    Token PushToken(char ShortVariant, Vec<String> LongVariants, String& Data, int& Index);
+    TokenTypes IdentifyToken(String Value);
+    Vec<Token> LexicalAnalisys(String Data);
 };
