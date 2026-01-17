@@ -3,20 +3,21 @@
 #include <types.hpp>
 
 enum class TokenTypes {
-    Unknown, Keyword, 
+    Unknown, Keyword, Types, Symbol,
     Int, Float, Bool, StringLiteral,
-    Add, Sub, Mul, Div, Pow,
+    Add, Sub, Mul, Div, Pow, Assign,
+    Inc, Dec, AddA, SubA, MulA, DivA,
     Eq, Neq, Gtr, Geq, Lss, Leq,
+    Not, And, Or,
     LParam, RParam, LBracket, RBracket, LBrace, RBrace,
     Period, Comma,
 
     Eol = 255
-
 };
 
 struct Token {
-    int Type;
+    TokenTypes Type;
     String Value;
 
-    Token(int T, String V) : Type(T), Value(V) {}
+    Token(TokenTypes T, String V) : Type(T), Value(V) {}
 };
