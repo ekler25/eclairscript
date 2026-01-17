@@ -22,7 +22,7 @@ TokenTypes Lexer::IdentifyToken(String Value) {
     if (IsInVector(Value, Keywords)) return TokenTypes::Keyword;
     if (IsInVector(Value, Types)) return TokenTypes::Types;
     if (IsValidSymbolName(Value)) return TokenTypes::Symbol;
-    if (IsANumber(Value)) return TokenTypes::Int;
+    if (IsAnInt(Value)) return TokenTypes::Int;
     return TokenTypes::Unknown;  
 }
 
@@ -92,3 +92,4 @@ Vec<Token> Lexer::LexicalAnalisys(String Data) {
     }
     return ToReturn;
 }
+
