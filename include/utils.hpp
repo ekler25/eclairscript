@@ -10,7 +10,7 @@ bool IsInVector(T Value, Vec<T> Vector) {
     return false;
 }
 
-bool IsANumber(String Value) {
+bool IsAnInt(String Value) {
     if (Value.empty()) return false;
 
     for (auto& C : Value) {
