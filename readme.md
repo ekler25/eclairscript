@@ -19,5 +19,11 @@ This repository contains the **Eclairscript compiler**, which translates human-r
 Currently, running this command will display a list of tokens.  
 In future versions, it will generate a compressed `.eclair` file containing bytecode that can be executed by the VM.
 
+# todo
+
+- parser
+- transpiler (parser nodes -> bytecode)
+- idk other stuff
+
 ## EclairVM
 EclairVM has its own [repository](https://github.com/ekler25/eclairvm) (give me star pls)
